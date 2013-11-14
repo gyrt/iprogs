@@ -4,12 +4,16 @@ import argparse
 import threading
 import NetflowServer
 
+"""
+Main programm body. Parser for command line arguments located here. Futhermore, threads init here
+"""
+
 if __name__ == "__main__":
 	HOST, PORT = "localhost", 9996
 	ACTION = "/bin/true"
 	LIMIT = 4294967296
 
-	parser = argparse.ArgumentParser("sphx-server")
+	parser = argparse.ArgumentParser("iprogs")
 	parser.add_argument("-d", "--debug", help="Start in debug mode", action="store_true", default=False)
 	parser.add_argument("-i", "--ip", help="IP to listen (default: {0})".format(HOST), type=str, default=HOST)
 	parser.add_argument("-p", "--port", help="PORT to listen (default: {0})".format(PORT), type=int, default=PORT)
